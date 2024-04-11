@@ -16,11 +16,15 @@ type fs struct {
 	MountedOn string
 }
 
-func Readable(num int) string{
-	if num >= 1e6{
-		return fmt.Sprint(num/1e6)
+func Readable(num int) string {
+	if num >= 1e6 {
+		return fmt.Sprint((int64(num / 1e6))) + "G"
+	} else if num >= 1e3 {
+		return fmt.Sprint(num/1e3) + "M"
+	} else {
+		return fmt.Sprint(num) + "K"
 	}
-	return " "
+
 }
 
 func PrintTop2Size(system []fs) {

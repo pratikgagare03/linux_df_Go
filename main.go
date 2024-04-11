@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os/exec"
 	"project/parser"
 	"strings"
@@ -11,4 +12,5 @@ func main() {
 	op := string(output)
 	lines := strings.Split(op, "\n")
 	parser.GetResults(lines)
+	fmt.Println(parser.Readable(479077064))
 }
