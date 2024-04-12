@@ -1,16 +1,16 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"os/exec"
 	"project/parser"
 	"strings"
 )
 
 func main() {
-	output, _ := exec.Command("df").Output()
+	output, _ := exec.Command("df", "-h").Output()
 	op := string(output)
+	log.Println("\n", op)
 	lines := strings.Split(op, "\n")
 	parser.GetResults(lines)
-	fmt.Println(parser.Readable(479077064))
 }
