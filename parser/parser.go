@@ -1,11 +1,10 @@
 package parser
 
 import (
-	"fmt"
-	"log"
 	"sort"
 	"strconv"
 	"strings"
+	"project/logger"
 )
 
 type fs struct {
@@ -16,7 +15,23 @@ type fs struct {
 	Use       string
 	MountedOn string
 }
-func GetResults(lines []string) {
+
+
+func GetFormattedDFOutput(system[] fs, n int) string{
+	n = min(len(system),n)
+	n = max(0, n)
+	ans := ""
+	ans += "\nfilesystem	    Size    Used    Avail   Use    MountedOn\n"
+	for _, val:=range system[:n]{
+		ans += (val.Name+strings.Repeat(" ", 16-len(val.Name))+val.Size+strings.Repeat(" ", 8-len(val.Size))+ val.Used+strings.Repeat(" ", 8-len(val.Used))+val.Avail+ strings.Repeat(" ", 8-len(val.Avail))+val.Use+ strings.Repeat(" ", 8-len(val.Use))+val.MountedOn+"\n")
+	}
+	return ans
+}
+
+func GetResults(op string) string{
+	logger.Info("Parser started")
+	lines := strings.Split(op, "\n")
+
 	var system []fs
 
 	for _, line := range lines[1:] {
@@ -36,12 +51,22 @@ func GetResults(lines []string) {
 		}
 		system = append(system, curr)
 	}
-
-	log.Writer()
-	PrintTop2Size(system)
-	PrintTop2Avail(system)
-	PrintTop2Use(system)
-
+	res := GetTop2Size(system)
+	if(len(res)!=0){
+		logger.Debug("GetTop2Size returned a non zero length string")
+	}
+	res1 := GetTop2Avail(system)
+	if(len(res1)!=0){
+		logger.Debug("GetTop2Avail returned a non zero length string")
+		res+=res1
+	}
+	res2 := GetTop2Use(system)
+	if(len(res2)!=0){
+		logger.Debug("GetTop2Use returned a non zero length string")
+		res+=res2
+	}
+	logger.Info("Parser exit")
+	return res
 }
 
 func parseHumanReadableSize(sizeStr string) float64 {
@@ -57,48 +82,30 @@ func parseHumanReadableSize(sizeStr string) float64 {
 	return size
 }
 
-func PrintTop2Size(system []fs) {
+func GetTop2Size(system []fs) string{
 	sort.Slice(system, func(i, j int) bool {
 		sizei := parseHumanReadableSize(system[i].Size)
 		sizej := parseHumanReadableSize(system[j].Size)
-
 		return sizei > sizej
 	})
-	log.Printf("\nTop 2 filesystem by size are :")
-	fmt.Println("\nfilesystem	Size    Used    Avail   Use    MountedOn")
-	for _, val:=range system[:2]{
-		fmt.Print(val.Name,strings.Repeat(" ", 16-len(val.Name)),val.Size,strings.Repeat(" ", 8-len(val.Size)), val.Used, strings.Repeat(" ", 8-len(val.Used)),val.Avail, strings.Repeat(" ", 8-len(val.Avail)),val.Use, strings.Repeat(" ", 8-len(val.Use)),val.MountedOn,"\n")
-	}
-	fmt.Println()
+	return "\nTop 2 filesystem by size are :" + GetFormattedDFOutput(system, 2)
 }
 
-func PrintTop2Avail(system []fs) {
+func GetTop2Avail(system []fs) string{
 	sort.Slice(system, func(i, j int) bool {
 		availi := parseHumanReadableSize(system[i].Avail)
 		availj := parseHumanReadableSize(system[j].Avail)
 		return availi > availj
 	})
-	log.Printf("\nTop 2 filesystem by Avail are :")
-	fmt.Println("\nName		Size    Used    Avail   Use    MountedOn")
-	for _, val:=range system[:2]{
-		fmt.Print(val.Name,strings.Repeat(" ", 16-len(val.Name)),val.Size,strings.Repeat(" ", 8-len(val.Size)), val.Used, strings.Repeat(" ", 8-len(val.Used)),val.Avail, strings.Repeat(" ", 8-len(val.Avail)),val.Use, strings.Repeat(" ", 8-len(val.Use)),val.MountedOn,"\n")
-	}
-	fmt.Println()
-
+	return "\nTop 2 filesystem by Avail are :" + GetFormattedDFOutput(system, 2)
 }
 
-func PrintTop2Use(system []fs) {
+func GetTop2Use(system []fs) string{
 	sort.Slice(system, func(i, j int) bool {
 		usei, _ := strconv.ParseInt(strings.TrimSuffix(system[i].Use, "%"), 10, 64)
 		usej, _ := strconv.ParseInt(strings.TrimSuffix(system[j].Use, "%"), 10, 64)
 		return usei > usej
 	})
-	log.Printf("\nTop 2 filesystem by use are :")
-	fmt.Println("\nName		Size    Used    Avail   Use    MountedOn")
-	for _, val:=range system[:2]{
-		fmt.Print(val.Name,strings.Repeat(" ", 16-len(val.Name)),val.Size,strings.Repeat(" ", 8-len(val.Size)), val.Used, strings.Repeat(" ", 8-len(val.Used)),val.Avail, strings.Repeat(" ", 8-len(val.Avail)),val.Use, strings.Repeat(" ", 8-len(val.Use)),val.MountedOn,"\n")
-	}
-	fmt.Println()
-
+	return "\nTop 2 filesystem by use are :" + GetFormattedDFOutput(system, 2)
 }
 
