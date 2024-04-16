@@ -1,10 +1,13 @@
 package sorting
 
-import ("strconv"
-		"strings"
-		"errors"
-		"project/parser"
-		"sort")
+import (
+	"errors"
+	"project/logger"
+	"project/parser"
+	"sort"
+	"strconv"
+	"strings"
+)
 
 func parseHumanReadableSize(sizeStr string) float64 {
 	size,_:= strconv.ParseFloat(strings.TrimRight(sizeStr, "MKG"), 64)
@@ -20,6 +23,7 @@ func parseHumanReadableSize(sizeStr string) float64 {
 }
 
 func GetTop2Size(system []parser.Fs) ([]parser.Fs, error){
+	logger.Info("Entered Sorting")
 	if(len(system)<=0){
 		return system, errors.New("wrong input size")
 	}
@@ -29,10 +33,13 @@ func GetTop2Size(system []parser.Fs) ([]parser.Fs, error){
 		sizej := parseHumanReadableSize(system[j].Size)
 		return sizei > sizej
 	})
+
+	logger.Info("Exit Sorting")
 	return system, nil
 }
 
 func GetTop2Avail(system []parser.Fs) ([]parser.Fs, error){
+	logger.Info("Entered Sorting")
 	if(len(system)<=0){
 		return system, errors.New("wrong input size")
 	}
@@ -41,11 +48,14 @@ func GetTop2Avail(system []parser.Fs) ([]parser.Fs, error){
 		availj := parseHumanReadableSize(system[j].Avail)
 		return availi > availj
 	})
+
+	logger.Info("Exit Sorting")
 	return system, nil
 
 }
 
 func GetTop2Use(system []parser.Fs) ([]parser.Fs, error){
+	logger.Info("Entered Sorting")
 	if(len(system)<=0){
 		return system, errors.New("wrong input size")
 	}
@@ -54,6 +64,7 @@ func GetTop2Use(system []parser.Fs) ([]parser.Fs, error){
 		usej, _ := strconv.ParseInt(strings.TrimSuffix(system[j].Use, "%"), 10, 64)
 		return usei > usej
 	})
+	logger.Info("Exit Sorting")
 	return system, nil
 	
 }

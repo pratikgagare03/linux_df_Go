@@ -16,7 +16,10 @@ type Fs struct {
 }
 
 
-func GetFormattedDFOutput(system[] Fs, n int) string{
+func GetFormattedDFOutput(system[] Fs, n int) (string, error){
+	if(len(system)<=0){
+		return "", errors.New("recieved empty input")
+	}
 	n = min(len(system),n)
 	n = max(0, n)
 	ans := ""
@@ -24,7 +27,7 @@ func GetFormattedDFOutput(system[] Fs, n int) string{
 	for _, val:=range system[:n]{
 		ans += (val.Name+strings.Repeat(" ", 16-len(val.Name))+val.Size+strings.Repeat(" ", 8-len(val.Size))+ val.Used+strings.Repeat(" ", 8-len(val.Used))+val.Avail+ strings.Repeat(" ", 8-len(val.Avail))+val.Use+ strings.Repeat(" ", 8-len(val.Use))+val.MountedOn+"\n")
 	}
-	return ans
+	return ans, nil
 }
 
 func GetResults(op string) ([]Fs, error){

@@ -28,7 +28,6 @@ func main() {
 	logger.Info("calling parser")
 
 	system, err := parser.GetResults(op)
-	fmt.Printf("%+v", system)
 	if err != nil {
 		logger.Debug("Parser returned a valid array")
 	}
@@ -41,7 +40,8 @@ func main() {
 		logger.Error("GetTop2Size returned with error: ", err)
 	} else {
 		logger.Debug("GetTop2Size returned a output")
-		res += "\nTop 2 filesystem by size are :" + parser.GetFormattedDFOutput(system, 2)
+		op,_:=parser.GetFormattedDFOutput(system, 2)
+		res += "\nTop 2 filesystem by size are :" + op
 	}
 
 	logger.Info("Entered sorting for Avail")
@@ -52,7 +52,8 @@ func main() {
 		logger.Error("GetTop2Avail returned with error: ", err)
 	} else {
 		logger.Debug("GetTop2Avail returned a output")
-		res += "\nTop 2 filesystem by Avail are :" + parser.GetFormattedDFOutput(system, 2)
+		op,_:=parser.GetFormattedDFOutput(system, 2)
+		res += "\nTop 2 filesystem by Avail are :" + op
 	}
 
 	logger.Info("Entered sorting for use")
@@ -62,7 +63,8 @@ func main() {
 		logger.Error("GetTop2Use returned with error: ", err)
 	} else {
 		logger.Debug("GetTop2Use returned a output")
-		res += "\nTop 2 filesystem by use are :" + parser.GetFormattedDFOutput(system, 2)
+		op,_:=parser.GetFormattedDFOutput(system, 2)
+		res += "\nTop 2 filesystem by use are :" + op
 	}
 
 	file, err := os.Create("dfResults.txt")

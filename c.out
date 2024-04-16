@@ -1,0 +1,19 @@
+mode: set
+project/main.go:11.13,18.16 5 0
+project/main.go:18.16,20.13 2 0
+project/main.go:21.8,23.3 1 0
+project/main.go:25.2,30.16 4 0
+project/main.go:30.16,32.3 1 0
+project/main.go:33.2,38.16 4 0
+project/main.go:38.16,40.3 1 0
+project/main.go:40.8,43.3 2 0
+project/main.go:45.2,49.16 3 0
+project/main.go:49.16,51.3 1 0
+project/main.go:51.8,54.3 2 0
+project/main.go:56.2,59.16 3 0
+project/main.go:59.16,61.3 1 0
+project/main.go:61.8,64.3 2 0
+project/main.go:66.2,68.16 2 0
+project/main.go:68.16,70.13 2 0
+project/main.go:71.8,73.3 1 0
+project/main.go:75.2,80.46 4 0
