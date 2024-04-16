@@ -83,7 +83,7 @@ func TestGetTop2Size(t *testing.T) {
 				MountedOn: "/",
 			},
 			{
-				Name:      "abc",
+				Name:      "def",
 				Size:      "250G",
 				Used:      "50G",
 				Avail:     "200G",
@@ -93,7 +93,7 @@ func TestGetTop2Size(t *testing.T) {
 		}
 		expected := []parser.Fs{
 			{
-				Name:      "abc",
+				Name:      "def",
 				Size:      "250G",
 				Used:      "50G",
 				Avail:     "200G",
@@ -138,7 +138,7 @@ func TestGetTop2Use(t *testing.T) {
 				MountedOn: "/",
 			},
 			{
-				Name:      "abc",
+				Name:      "def",
 				Size:      "250G",
 				Used:      "50G",
 				Avail:     "200G",
@@ -156,7 +156,7 @@ func TestGetTop2Use(t *testing.T) {
 				MountedOn: "/",
 			},
 			{
-				Name:      "abc",
+				Name:      "def",
 				Size:      "250G",
 				Used:      "50G",
 				Avail:     "200G",
