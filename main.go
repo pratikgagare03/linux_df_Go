@@ -1,16 +1,18 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"os/exec"
 	"project/logger"
 	"project/parser"
+	"project/sorting"
 )
 
 func main() {
 	logger.Info("Main initialised")
-	os.Remove("dfResults.txt")
 
+	os.Remove("dfResults.txt")
 	output, err := exec.Command("df", "-h").Output()
 	op := string(output)
 
@@ -24,11 +26,43 @@ func main() {
 	res := "df output \n" + op
 
 	logger.Info("calling parser")
-	res += parser.GetResults(op)
+
+	system, err := parser.GetResults(op)
+	fmt.Printf("%+v", system)
+	if err != nil {
+		logger.Debug("Parser returned a valid array")
+	}
 	logger.Info("back from parser")
-	
-	if(len(res)!=0){
-		logger.Debug("Parser returned a non zero length string")
+	logger.Info("Entered sorting for size")
+
+	system, err = sorting.GetTop2Size(system)
+
+	if err != nil {
+		logger.Error("GetTop2Size returned with error: ", err)
+	} else {
+		logger.Debug("GetTop2Size returned a output")
+		res += "\nTop 2 filesystem by size are :" + parser.GetFormattedDFOutput(system, 2)
+	}
+
+	logger.Info("Entered sorting for Avail")
+
+	system, err = sorting.GetTop2Avail(system)
+
+	if err != nil {
+		logger.Error("GetTop2Avail returned with error: ", err)
+	} else {
+		logger.Debug("GetTop2Avail returned a output")
+		res += "\nTop 2 filesystem by Avail are :" + parser.GetFormattedDFOutput(system, 2)
+	}
+
+	logger.Info("Entered sorting for use")
+
+	system, err = sorting.GetTop2Use(system)
+	if err != nil {
+		logger.Error("GetTop2Use returned with error: ", err)
+	} else {
+		logger.Debug("GetTop2Use returned a output")
+		res += "\nTop 2 filesystem by use are :" + parser.GetFormattedDFOutput(system, 2)
 	}
 
 	file, err := os.Create("dfResults.txt")
@@ -43,6 +77,7 @@ func main() {
 	defer file.Close()
 
 	file.WriteString(res)
+
 	logger.Info("output written to the file")
 	logger.Info("Program executed successfully")
 }
