@@ -26,6 +26,7 @@ func main() {
 	logger.Info("calling parser")
 	res += parser.GetResults(op)
 	logger.Info("back from parser")
+	
 	if(len(res)!=0){
 		logger.Debug("Parser returned a non zero length string")
 	}

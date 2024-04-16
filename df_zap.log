@@ -43,3 +43,127 @@
 {"level":"debug","time":"2024-04-15T15:15:21.469+0530","msg":"output file (dfResults) created successfully"}
 {"level":"info","time":"2024-04-15T15:15:21.469+0530","msg":"output written to the file"}
 {"level":"info","time":"2024-04-15T15:15:21.469+0530","msg":"Program executed successfully"}
+
+{"level":"info","time":"2024-04-15T15:33:37.320+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-04-15T15:33:37.321+0530","msg":"Main initialised"}
+{"level":"debug","time":"2024-04-15T15:33:37.328+0530","msg":"df command executed wo err"}
+{"level":"info","time":"2024-04-15T15:33:37.329+0530","msg":"calling parser"}
+{"level":"info","time":"2024-04-15T15:33:37.329+0530","msg":"Parser started"}
+{"level":"debug","time":"2024-04-15T15:33:37.329+0530","msg":"GetTop2Size returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:33:37.329+0530","msg":"GetTop2Avail returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:33:37.329+0530","msg":"GetTop2Use returned a non zero length string"}
+{"level":"info","time":"2024-04-15T15:33:37.329+0530","msg":"Parser exit"}
+{"level":"info","time":"2024-04-15T15:33:37.329+0530","msg":"back from parser"}
+{"level":"debug","time":"2024-04-15T15:33:37.329+0530","msg":"Parser returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:33:37.329+0530","msg":"output file (dfResults) created successfully"}
+{"level":"info","time":"2024-04-15T15:33:37.329+0530","msg":"output written to the file"}
+{"level":"info","time":"2024-04-15T15:33:37.329+0530","msg":"Program executed successfully"}
+
+{"level":"info","time":"2024-04-15T15:33:44.217+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-04-15T15:33:44.217+0530","msg":"Main initialised"}
+{"level":"debug","time":"2024-04-15T15:33:44.219+0530","msg":"df command executed wo err"}
+{"level":"info","time":"2024-04-15T15:33:44.219+0530","msg":"calling parser"}
+{"level":"info","time":"2024-04-15T15:33:44.219+0530","msg":"Parser started"}
+{"level":"debug","time":"2024-04-15T15:33:44.219+0530","msg":"GetTop2Size returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:33:44.219+0530","msg":"GetTop2Avail returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:33:44.219+0530","msg":"GetTop2Use returned a non zero length string"}
+{"level":"info","time":"2024-04-15T15:33:44.219+0530","msg":"Parser exit"}
+{"level":"info","time":"2024-04-15T15:33:44.219+0530","msg":"back from parser"}
+{"level":"debug","time":"2024-04-15T15:33:44.219+0530","msg":"Parser returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:33:44.219+0530","msg":"output file (dfResults) created successfully"}
+{"level":"info","time":"2024-04-15T15:33:44.219+0530","msg":"output written to the file"}
+{"level":"info","time":"2024-04-15T15:33:44.219+0530","msg":"Program executed successfully"}
+
+{"level":"info","time":"2024-04-15T15:34:01.119+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-04-15T15:34:01.119+0530","msg":"Main initialised"}
+{"level":"debug","time":"2024-04-15T15:34:01.122+0530","msg":"df command executed wo err"}
+{"level":"info","time":"2024-04-15T15:34:01.122+0530","msg":"calling parser"}
+{"level":"info","time":"2024-04-15T15:34:01.122+0530","msg":"Parser started"}
+{"level":"debug","time":"2024-04-15T15:34:01.122+0530","msg":"GetTop2Size returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:01.122+0530","msg":"GetTop2Avail returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:01.122+0530","msg":"GetTop2Use returned a non zero length string"}
+{"level":"info","time":"2024-04-15T15:34:01.122+0530","msg":"Parser exit"}
+{"level":"info","time":"2024-04-15T15:34:01.122+0530","msg":"back from parser"}
+{"level":"debug","time":"2024-04-15T15:34:01.122+0530","msg":"Parser returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:01.122+0530","msg":"output file (dfResults) created successfully"}
+{"level":"info","time":"2024-04-15T15:34:01.122+0530","msg":"output written to the file"}
+{"level":"info","time":"2024-04-15T15:34:01.122+0530","msg":"Program executed successfully"}
+
+{"level":"info","time":"2024-04-15T15:34:02.755+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-04-15T15:34:02.755+0530","msg":"Main initialised"}
+{"level":"debug","time":"2024-04-15T15:34:02.757+0530","msg":"df command executed wo err"}
+{"level":"info","time":"2024-04-15T15:34:02.757+0530","msg":"calling parser"}
+{"level":"info","time":"2024-04-15T15:34:02.757+0530","msg":"Parser started"}
+{"level":"debug","time":"2024-04-15T15:34:02.757+0530","msg":"GetTop2Size returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:02.757+0530","msg":"GetTop2Avail returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:02.757+0530","msg":"GetTop2Use returned a non zero length string"}
+{"level":"info","time":"2024-04-15T15:34:02.757+0530","msg":"Parser exit"}
+{"level":"info","time":"2024-04-15T15:34:02.757+0530","msg":"back from parser"}
+{"level":"debug","time":"2024-04-15T15:34:02.757+0530","msg":"Parser returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:02.757+0530","msg":"output file (dfResults) created successfully"}
+{"level":"info","time":"2024-04-15T15:34:02.757+0530","msg":"output written to the file"}
+{"level":"info","time":"2024-04-15T15:34:02.757+0530","msg":"Program executed successfully"}
+
+{"level":"info","time":"2024-04-15T15:34:02.935+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-04-15T15:34:02.936+0530","msg":"Main initialised"}
+{"level":"debug","time":"2024-04-15T15:34:02.941+0530","msg":"df command executed wo err"}
+{"level":"info","time":"2024-04-15T15:34:02.941+0530","msg":"calling parser"}
+{"level":"info","time":"2024-04-15T15:34:02.941+0530","msg":"Parser started"}
+{"level":"debug","time":"2024-04-15T15:34:02.941+0530","msg":"GetTop2Size returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:02.941+0530","msg":"GetTop2Avail returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:02.941+0530","msg":"GetTop2Use returned a non zero length string"}
+{"level":"info","time":"2024-04-15T15:34:02.941+0530","msg":"Parser exit"}
+{"level":"info","time":"2024-04-15T15:34:02.941+0530","msg":"back from parser"}
+{"level":"debug","time":"2024-04-15T15:34:02.941+0530","msg":"Parser returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:02.941+0530","msg":"output file (dfResults) created successfully"}
+{"level":"info","time":"2024-04-15T15:34:02.942+0530","msg":"output written to the file"}
+{"level":"info","time":"2024-04-15T15:34:02.942+0530","msg":"Program executed successfully"}
+
+{"level":"info","time":"2024-04-15T15:34:15.952+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-04-15T15:34:15.952+0530","msg":"Main initialised"}
+{"level":"debug","time":"2024-04-15T15:34:15.954+0530","msg":"df command executed wo err"}
+{"level":"info","time":"2024-04-15T15:34:15.954+0530","msg":"calling parser"}
+{"level":"info","time":"2024-04-15T15:34:15.954+0530","msg":"Parser started"}
+{"level":"debug","time":"2024-04-15T15:34:15.954+0530","msg":"GetTop2Size returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:15.954+0530","msg":"GetTop2Avail returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:15.954+0530","msg":"GetTop2Use returned a non zero length string"}
+{"level":"info","time":"2024-04-15T15:34:15.954+0530","msg":"Parser exit"}
+{"level":"info","time":"2024-04-15T15:34:15.954+0530","msg":"back from parser"}
+{"level":"debug","time":"2024-04-15T15:34:15.954+0530","msg":"Parser returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:34:15.954+0530","msg":"output file (dfResults) created successfully"}
+{"level":"info","time":"2024-04-15T15:34:15.954+0530","msg":"output written to the file"}
+{"level":"info","time":"2024-04-15T15:34:15.954+0530","msg":"Program executed successfully"}
+
+{"level":"info","time":"2024-04-15T15:56:43.983+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-04-15T15:56:43.983+0530","msg":"Main initialised"}
+{"level":"error","time":"2024-04-15T15:56:43.985+0530","msg":"error executing df command :exit status 1"}
+
+{"level":"info","time":"2024-04-15T15:58:28.125+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-04-15T15:58:28.125+0530","msg":"Main initialised"}
+{"level":"debug","time":"2024-04-15T15:58:28.127+0530","msg":"df command executed wo err"}
+{"level":"info","time":"2024-04-15T15:58:28.128+0530","msg":"calling parser"}
+{"level":"info","time":"2024-04-15T15:58:28.128+0530","msg":"Parser started"}
+{"level":"debug","time":"2024-04-15T15:58:28.128+0530","msg":"GetTop2Size returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:58:28.128+0530","msg":"GetTop2Avail returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:58:28.128+0530","msg":"GetTop2Use returned a non zero length string"}
+{"level":"info","time":"2024-04-15T15:58:28.128+0530","msg":"Parser exit"}
+{"level":"info","time":"2024-04-15T15:58:28.128+0530","msg":"back from parser"}
+{"level":"debug","time":"2024-04-15T15:58:28.128+0530","msg":"Parser returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T15:58:28.128+0530","msg":"output file (dfResults) created successfully"}
+{"level":"info","time":"2024-04-15T15:58:28.128+0530","msg":"output written to the file"}
+{"level":"info","time":"2024-04-15T15:58:28.128+0530","msg":"Program executed successfully"}
+
+{"level":"info","time":"2024-04-15T17:59:23.693+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-04-15T17:59:23.693+0530","msg":"Main initialised"}
+{"level":"debug","time":"2024-04-15T17:59:23.695+0530","msg":"df command executed wo err"}
+{"level":"info","time":"2024-04-15T17:59:23.695+0530","msg":"calling parser"}
+{"level":"info","time":"2024-04-15T17:59:23.695+0530","msg":"Parser started"}
+{"level":"debug","time":"2024-04-15T17:59:23.695+0530","msg":"GetTop2Size returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T17:59:23.695+0530","msg":"GetTop2Avail returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T17:59:23.695+0530","msg":"GetTop2Use returned a non zero length string"}
+{"level":"info","time":"2024-04-15T17:59:23.695+0530","msg":"Parser exit"}
+{"level":"info","time":"2024-04-15T17:59:23.695+0530","msg":"back from parser"}
+{"level":"debug","time":"2024-04-15T17:59:23.695+0530","msg":"Parser returned a non zero length string"}
+{"level":"debug","time":"2024-04-15T17:59:23.695+0530","msg":"output file (dfResults) created successfully"}
+{"level":"info","time":"2024-04-15T17:59:23.695+0530","msg":"output written to the file"}
+{"level":"info","time":"2024-04-15T17:59:23.695+0530","msg":"Program executed successfully"}

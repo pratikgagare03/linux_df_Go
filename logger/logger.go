@@ -14,6 +14,7 @@ func init() {
 		panic(err)
 	}
 	file.WriteString("\n")
+	
 	encoderCfg := zapcore.EncoderConfig{
 		TimeKey:        "time",
 		LevelKey:       "level",
