@@ -1,7 +1,5 @@
-sorting/coverage.html
-parser/coverage.html
+*.coverage.html
 
-parser/*.out
-sorting/*.out
+*.out
 
 main
