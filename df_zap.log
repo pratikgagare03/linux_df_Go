@@ -1210,3 +1210,72 @@
 {"level":"debug","time":"2024-05-09T17:18:14.441+0530","msg":"output file (dfResults) created successfully"}
 {"level":"info","time":"2024-05-09T17:18:14.441+0530","msg":"output written to the file"}
 {"level":"info","time":"2024-05-09T17:18:14.441+0530","msg":"Program executed successfully"}
+
+{"level":"info","time":"2024-05-09T17:35:08.509+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-05-09T17:35:08.509+0530","msg":"Main initialised"}
+{"level":"debug","time":"2024-05-09T17:35:08.511+0530","msg":"df command executed wo err"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"calling parser"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Parser started"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Parser Exit"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"back from parser"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Entered sorting for size"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Entered Sorting"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Exit Sorting"}
+{"level":"debug","time":"2024-05-09T17:35:08.511+0530","msg":"GetTop2Size returned a output"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Entered sorting for Avail"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Entered Sorting"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Exit Sorting"}
+{"level":"debug","time":"2024-05-09T17:35:08.511+0530","msg":"GetTop2Avail returned a output"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Entered sorting for use"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Entered Sorting"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Exit Sorting"}
+{"level":"debug","time":"2024-05-09T17:35:08.511+0530","msg":"GetTop2Use returned a output"}
+{"level":"debug","time":"2024-05-09T17:35:08.511+0530","msg":"output file (dfResults) created successfully"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"output written to the file"}
+{"level":"info","time":"2024-05-09T17:35:08.511+0530","msg":"Program executed successfully"}
+
+{"level":"info","time":"2024-05-09T17:35:14.920+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-05-09T17:35:14.920+0530","msg":"Main initialised"}
+{"level":"debug","time":"2024-05-09T17:35:14.921+0530","msg":"df command executed wo err"}
+{"level":"info","time":"2024-05-09T17:35:14.921+0530","msg":"calling parser"}
+{"level":"info","time":"2024-05-09T17:35:14.921+0530","msg":"Parser started"}
+{"level":"info","time":"2024-05-09T17:35:14.921+0530","msg":"Parser Exit"}
+{"level":"info","time":"2024-05-09T17:35:14.921+0530","msg":"back from parser"}
+{"level":"info","time":"2024-05-09T17:35:14.921+0530","msg":"Entered sorting for size"}
+{"level":"info","time":"2024-05-09T17:35:14.921+0530","msg":"Entered Sorting"}
+{"level":"info","time":"2024-05-09T17:35:14.921+0530","msg":"Exit Sorting"}
+{"level":"debug","time":"2024-05-09T17:35:14.921+0530","msg":"GetTop2Size returned a output"}
+{"level":"info","time":"2024-05-09T17:35:14.921+0530","msg":"Entered sorting for Avail"}
+{"level":"info","time":"2024-05-09T17:35:14.921+0530","msg":"Entered Sorting"}
+{"level":"info","time":"2024-05-09T17:35:14.922+0530","msg":"Exit Sorting"}
+{"level":"debug","time":"2024-05-09T17:35:14.922+0530","msg":"GetTop2Avail returned a output"}
+{"level":"info","time":"2024-05-09T17:35:14.922+0530","msg":"Entered sorting for use"}
+{"level":"info","time":"2024-05-09T17:35:14.922+0530","msg":"Entered Sorting"}
+{"level":"info","time":"2024-05-09T17:35:14.922+0530","msg":"Exit Sorting"}
+{"level":"debug","time":"2024-05-09T17:35:14.922+0530","msg":"GetTop2Use returned a output"}
+{"level":"debug","time":"2024-05-09T17:35:14.922+0530","msg":"output file (dfResults) created successfully"}
+{"level":"info","time":"2024-05-09T17:35:14.922+0530","msg":"output written to the file"}
+{"level":"info","time":"2024-05-09T17:35:14.922+0530","msg":"Program executed successfully"}
+
+{"level":"info","time":"2024-05-09T17:35:17.321+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-05-09T17:35:17.321+0530","msg":"Main initialised"}
+{"level":"debug","time":"2024-05-09T17:35:17.323+0530","msg":"df command executed wo err"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"calling parser"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Parser started"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Parser Exit"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"back from parser"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Entered sorting for size"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Entered Sorting"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Exit Sorting"}
+{"level":"debug","time":"2024-05-09T17:35:17.323+0530","msg":"GetTop2Size returned a output"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Entered sorting for Avail"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Entered Sorting"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Exit Sorting"}
+{"level":"debug","time":"2024-05-09T17:35:17.323+0530","msg":"GetTop2Avail returned a output"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Entered sorting for use"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Entered Sorting"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Exit Sorting"}
+{"level":"debug","time":"2024-05-09T17:35:17.323+0530","msg":"GetTop2Use returned a output"}
+{"level":"debug","time":"2024-05-09T17:35:17.323+0530","msg":"output file (dfResults) created successfully"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"output written to the file"}
+{"level":"info","time":"2024-05-09T17:35:17.323+0530","msg":"Program executed successfully"}

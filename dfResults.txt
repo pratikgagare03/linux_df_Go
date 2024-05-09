@@ -2,7 +2,7 @@ df output
 Filesystem      Size  Used Avail Use% Mounted on
 tmpfs           1.6G  2.3M  1.6G   1% /run
 /dev/sda3       457G   21G  414G   5% /
-tmpfs           7.8G  151M  7.7G   2% /dev/shm
+tmpfs           7.8G  222M  7.6G   3% /dev/shm
 tmpfs           5.0M  4.0K  5.0M   1% /run/lock
 efivarfs        128K   91K   33K  74% /sys/firmware/efi/efivars
 tmpfs           7.8G     0  7.8G   0% /run/qemu
@@ -12,7 +12,7 @@ tmpfs           1.6G  6.8M  1.6G   1% /run/user/1000
 Top 2 filesystem by size are :
 filesystem	    Size    Used    Avail   Use    MountedOn
 /dev/sda3       457G    21G     414G    5%      /
-tmpfs           7.8G    151M    7.7G    2%      /dev/shm
+tmpfs           7.8G    222M    7.6G    3%      /dev/shm
 
 Top 2 filesystem by Avail are :
 filesystem	    Size    Used    Avail   Use    MountedOn

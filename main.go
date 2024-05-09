@@ -16,7 +16,8 @@ func main() {
 	wg := &sync.WaitGroup{}
 	op := make(chan string)
 	wg.Add(2)
-	go func(wg *sync.WaitGroup) {
+
+	go func() {
 		defer wg.Done()
 		output, err := exec.Command("df", "-h").Output()
 		op <- string(output)
@@ -26,9 +27,9 @@ func main() {
 		} else {
 			logger.Debug("df command executed wo err")
 		}
-	}(wg)
+	}()
 
-	go func(wg *sync.WaitGroup) {
+	go func() {
 		defer wg.Done()
 		dfop := <-op
 		res := "df output \n" + dfop
@@ -89,7 +90,7 @@ func main() {
 		logger.Info("output written to the file")
 
 		logger.Info("Program executed successfully")
-	}(wg)
+	}()
 
 	wg.Wait()
 
