@@ -6,79 +6,91 @@ import (
 	"project/logger"
 	"project/parser"
 	"project/sorting"
+	"sync"
 )
 
 func main() {
 	logger.Info("Main initialised")
+	// os.Remove("dfResults.txt")
 
-	os.Remove("dfResults.txt")
-	output, err := exec.Command("df", "-h").Output()
-	op := string(output)
+	wg := &sync.WaitGroup{}
+	op := make(chan string)
+	wg.Add(2)
+	go func(wg *sync.WaitGroup) {
+		defer wg.Done()
+		output, err := exec.Command("df", "-h").Output()
+		op <- string(output)
+		if err != nil {
+			logger.Error("error executing df command :", err)
+			panic(err)
+		} else {
+			logger.Debug("df command executed wo err")
+		}
+	}(wg)
 
-	if err != nil {
-		logger.Error("error executing df command :", err)
-		panic(err)
-	} else {
-		logger.Debug("df command executed wo err")
-	}
+	go func(wg *sync.WaitGroup) {
+		defer wg.Done()
+		dfop := <-op
+		res := "df output \n" + dfop
 
-	res := "df output \n" + op
+		logger.Info("calling parser")
+		system, err := parser.GetResults(dfop)
+		if err != nil {
+			logger.Debug("Parser returned a valid array")
+		}
+		logger.Info("back from parser")
+		logger.Info("Entered sorting for size")
 
-	logger.Info("calling parser")
+		system, err = sorting.GetTop2Size(system)
 
-	system, err := parser.GetResults(op)
-	if err != nil {
-		logger.Debug("Parser returned a valid array")
-	}
-	logger.Info("back from parser")
-	logger.Info("Entered sorting for size")
+		if err != nil {
+			logger.Error("GetTop2Size returned with error: ", err)
+		} else {
+			logger.Debug("GetTop2Size returned a output")
+			op, _ := parser.GetFormattedDFOutput(system, 2)
+			res += "\nTop 2 filesystem by size are :" + op
+		}
 
-	system, err = sorting.GetTop2Size(system)
+		logger.Info("Entered sorting for Avail")
 
-	if err != nil {
-		logger.Error("GetTop2Size returned with error: ", err)
-	} else {
-		logger.Debug("GetTop2Size returned a output")
-		op,_:=parser.GetFormattedDFOutput(system, 2)
-		res += "\nTop 2 filesystem by size are :" + op
-	}
+		system, err = sorting.GetTop2Avail(system)
 
-	logger.Info("Entered sorting for Avail")
+		if err != nil {
+			logger.Error("GetTop2Avail returned with error: ", err)
+		} else {
+			logger.Debug("GetTop2Avail returned a output")
+			op, _ := parser.GetFormattedDFOutput(system, 2)
+			res += "\nTop 2 filesystem by Avail are :" + op
+		}
 
-	system, err = sorting.GetTop2Avail(system)
+		logger.Info("Entered sorting for use")
 
-	if err != nil {
-		logger.Error("GetTop2Avail returned with error: ", err)
-	} else {
-		logger.Debug("GetTop2Avail returned a output")
-		op,_:=parser.GetFormattedDFOutput(system, 2)
-		res += "\nTop 2 filesystem by Avail are :" + op
-	}
+		system, err = sorting.GetTop2Use(system)
+		if err != nil {
+			logger.Error("GetTop2Use returned with error: ", err)
+		} else {
+			logger.Debug("GetTop2Use returned a output")
+			op, _ := parser.GetFormattedDFOutput(system, 2)
+			res += "\nTop 2 filesystem by use are :" + op
+		}
 
-	logger.Info("Entered sorting for use")
+		file, err := os.Create("dfResults.txt")
 
-	system, err = sorting.GetTop2Use(system)
-	if err != nil {
-		logger.Error("GetTop2Use returned with error: ", err)
-	} else {
-		logger.Debug("GetTop2Use returned a output")
-		op,_:=parser.GetFormattedDFOutput(system, 2)
-		res += "\nTop 2 filesystem by use are :" + op
-	}
+		if err != nil {
+			logger.Error("error creating output file (dfResults)", err)
+			panic(err)
+		} else {
+			logger.Debug("output file (dfResults) created successfully")
+		}
 
-	file, err := os.Create("dfResults.txt")
+		defer file.Close()
 
-	if err != nil {
-		logger.Error("error creating output file (dfResults)", err)
-		panic(err)
-	} else {
-		logger.Debug("output file (dfResults) created successfully")
-	}
+		file.WriteString(res)
+		logger.Info("output written to the file")
 
-	defer file.Close()
+		logger.Info("Program executed successfully")
+	}(wg)
 
-	file.WriteString(res)
+	wg.Wait()
 
-	logger.Info("output written to the file")
-	logger.Info("Program executed successfully")
 }

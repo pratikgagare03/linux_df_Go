@@ -1,0 +1,8 @@
+Execute the df command using go program
+parse the output 
+print the top 2 largest directories on basis of size as well as
+available space 
+create a different directory for main package and the parsing logic
+i.e use packages
+
+after that use Makefile targets to run the program

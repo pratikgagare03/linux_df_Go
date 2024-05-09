@@ -139,3 +139,8 @@
 {"level":"info","time":"2024-04-16T18:05:04.607+0530","msg":"Parser started"}
 {"level":"info","time":"2024-04-16T18:05:04.607+0530","msg":"Parser started"}
 {"level":"info","time":"2024-04-16T18:05:04.607+0530","msg":"Parser Exit"}
+
+{"level":"info","time":"2024-04-17T10:18:48.327+0530","msg":"Logger initialized"}
+{"level":"info","time":"2024-04-17T10:18:48.327+0530","msg":"Parser started"}
+{"level":"info","time":"2024-04-17T10:18:48.327+0530","msg":"Parser started"}
+{"level":"info","time":"2024-04-17T10:18:48.327+0530","msg":"Parser Exit"}
