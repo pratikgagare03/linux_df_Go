@@ -1,3 +1,7 @@
+sorting/coverage.html
 parser/coverage.html
-*.out
+
+parser/*.out
+sorting/*.out
+
 main
